@@ -5,7 +5,7 @@ int main() {
     int id = 0;
     vsite::oop::v4::leg_counter counter;
 
-    do {
+    while (true) {
         std::cout << "Enter animal id (1-3) (0 to stop): ";
         std::cin >> id;
 
@@ -19,7 +19,7 @@ int main() {
         std::string speciesName = counter.add_animal(a.get());
         std::cout << "Added: " << speciesName << std::endl;
 
-    } while (id != 0);
+    }
 
     std::cout << "Total legs: " << counter.legs() << std::endl;
 }
